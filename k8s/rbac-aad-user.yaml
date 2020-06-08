@@ -1,0 +1,12 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: aad-cluster-user
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: edit
+subjects:
+- apiGroup: rbac.authorization.k8s.io
+  kind: User
+  name: 356ef3ec-284f-4aef-af6f-a12c3e6f6429
